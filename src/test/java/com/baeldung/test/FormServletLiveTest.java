@@ -23,7 +23,7 @@ public class FormServletLiveTest {
     public void whenPostRequestUsingHttpClient_thenCorrect() throws Exception {
 
         HttpClient client = HttpClientBuilder.create().build();
-        HttpPost method = new HttpPost("http://localhost:8080/javax-servlets-0.0.1-SNAPSHOT/calculateServlet");
+        HttpPost method = new HttpPost("http://13.232.77.162:8080/javax-servlets-0.0.1-SNAPSHOT/calculateServlet");
 
         List<BasicNameValuePair> nvps = new ArrayList<>();
         nvps.add(new BasicNameValuePair("height", String.valueOf(2)));
