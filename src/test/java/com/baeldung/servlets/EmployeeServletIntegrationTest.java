@@ -40,7 +40,7 @@ public class EmployeeServletIntegrationTest {
 		employee = new Employee(id, name, department, salary);
 		
 		HttpClient client = HttpClientBuilder.create().build();
-        HttpGet method = new HttpGet("http://localhost:8080/javax-servlets-0.0.1-SNAPSHOT/employeeServlet");
+        HttpGet method = new HttpGet("http://13.232.77.162:8080/javax-servlets-0.0.1-SNAPSHOT/employeeServlet");
         HttpResponse httpResponse = client.execute(method);
         
         //System.out.println(((Header)httpResponse.getHeaders("employeejson")[0]).getValue());
