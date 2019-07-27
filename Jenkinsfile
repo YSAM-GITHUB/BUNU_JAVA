@@ -2,7 +2,7 @@
 
 node{
      stage ('git checkout'){
-	 git 'https://github.com/YSAM-GITHUB/BUNU_JAVA'
+	 git 'https://github.com/YSAM-GITHUB/BUNU_JAVA.git'
 
 	   }
 
