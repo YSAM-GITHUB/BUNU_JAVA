@@ -1,17 +1,23 @@
 
 
 node{
-     stage ('checkout'){
-	 git 'https://github.com/YSAM-GITHUB/BUNU_JAVA'
+     stage ('git checkout'){
+	 git 'https://github.com/Higourang/YGS-Friday'
 
-	  }
-	  stage('Build'){
-			////Get maven home path and build
-			def mvnHome = tool name: 'Maven 3.5.4', type:'maven'
-			sh "${mvnHome}/bin/mvn package"
 	   }
-	   stage('Test'){
-			def mvnHome = tool name: 'Maven 3.5.4', type:'maven'
-			sh "${mvnHome}/bin/mvn  test"
-      }
-    }
+
+	stage('unit Test'){
+			def mvnHome = tool name: 'Maven-3.6.1', type: 'maven'
+                        def mvnCMD  = "${mvnHome}/bin/mvn"
+			sh "${mvnCMD} test"
+	  
+           }
+        stage('Maven Package){
+			////Get maven home path and build
+			def mvnHome = tool name: 'Maven-3.6.1', type: 'maven'
+                        def mvnCMD  = "${mvnHome}/bin/mvn"
+			sh "${mvnCMD} clean package"
+	   }
+	   
+
+     }
